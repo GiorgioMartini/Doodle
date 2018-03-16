@@ -5,8 +5,10 @@ class HelloMessage extends React.Component {
     render() {
       return (
         <div>
-          <h1 className="pa4">Babbel bowlingjjj</h1>
-          Hello {this.props.name}
+          <h1 className="pa4">
+          Babbel bowlingo
+          </h1>
+          <p>Hello {this.props.name}</p>
         </div>
       );
     }
