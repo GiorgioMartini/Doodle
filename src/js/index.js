@@ -4,6 +4,6 @@ import store from './BowlingStore'
 import Game from './Game'
   
 ReactDOM.render(
-<Game name="Giorgio" />,
+<Game store={store} />,
 document.getElementById('root')
 )
