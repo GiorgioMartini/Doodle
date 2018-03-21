@@ -1,0 +1,14 @@
+.chat-background{
+    background-image: url('../img/body-bg.png');
+    background-repeat: repeat;
+    background-size: 60%;
+}
+
+/* 
+    Funcional type of css class => "min-w-4"
+    its reusable, composable and consistent from a design pov,
+    similar to the framework I've used for the rest of the styling (Tachyons)
+*/
+.min-w-4{
+    min-width: 4em;
+}

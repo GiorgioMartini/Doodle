@@ -1,12 +1,11 @@
 import { autorun, observable } from "mobx"
 
-class BowlingStore{
-    @observable frames  = 10
-    @observable score   = 0
-    @observable players = 1
+class MessagingApp{
+    @observable message  = ''
+    @observable url  = 'https://chatty.kubernetes.doodle-test.com/api/chatty/v1.0/?token=9zHgPu72Frz4'
 }
 
-var store =  new BowlingStore
+var store =  new MessagingApp
 
 export default  store
 
