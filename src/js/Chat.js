@@ -4,26 +4,46 @@ import axios from 'axios'
 
 @observer
 export default class Chat extends React.Component {
+  
+  componentDidMount(){
+    const chatObj = this
+    axios.get(this.props.store.url)
+    .then(function (response) {
+      chatObj.renderMessages(response)
+    })
+    .catch(function (error) {
+    })
+  }
+  
+  renderMessages(msgs){
+    console.log(msgs)
+    this.props.store.messagesDivs = msgs.data.map((item) => {
+      return {item.message}
+    })    
+    
+  }
+  
   sendMsg(){    
     axios.post(this.props.store.url, {
       message: this.props.store.message,
       author: 'Giorgio'
     })
     .then(function (response) {
-      console.log(response)
+      
     })
     .catch(function (error) {
-      console.log(error)
+      
     })
   }
   onChange (event) {
     this.props.store.message =  event.target.value
   }
   render() {
-      const { message, token }  = this.props.store
+      const { message, token, messages, messagesDivs }  = this.props.store
       return (
         <div className="flex flex-column h-100">
           <div className="ph5 pv2 chat-background flex-auto">
+           {messagesDivs}
           </div>
           <div className="pa2 bg-blue">
           <div className="mw8 center db">

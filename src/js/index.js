@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import store from './BowlingStore'
+import store from './ChatStore'
 import Chat from './Chat'
   
 ReactDOM.render(
