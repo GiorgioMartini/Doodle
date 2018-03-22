@@ -14,5 +14,5 @@ Built with:
  - React
  - ES6
  - mobx
- -Tachyons
+ - Tachyons
  
