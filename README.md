@@ -3,6 +3,7 @@
 ## How start it
 
  - Clone this repo
+ - CD into the directory
  - In the terminal run these commands: `npm install` and after `npm start`
  
 Built with:
