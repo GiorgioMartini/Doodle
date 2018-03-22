@@ -5,10 +5,13 @@
 }
 
 /* 
-    Funcional type of css class => "min-w-4"
+    Funcional type of css classes:
     its reusable, composable and consistent from a design pov,
     similar to the framework I've used for the rest of the styling (Tachyons)
 */
 .min-w-4{
     min-width: 4em;
+}
+.width-fit-content{
+    width: fit-content;
 }

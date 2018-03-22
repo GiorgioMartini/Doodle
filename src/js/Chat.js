@@ -18,7 +18,12 @@ export default class Chat extends React.Component {
   renderMessages(msgs){
     console.log(msgs)
     this.props.store.messagesDivs = msgs.data.map((item) => {
-      return {item.message}
+      return <div className="br3 bg-white near-gray b--light-gray width-fit-content pa2 ma3 ba " key={item._id}>
+        <p className="sans-serif ma1" key={item._id+1}>{item.author}</p>
+        <p className="sans-serif ma1" key={item._id+2}>{item.message}</p>
+        <p className="sans-serif ma1" key={item._id+3}>{item.timestamp}</p>
+      </div>
+      
     })    
     
   }
@@ -42,7 +47,7 @@ export default class Chat extends React.Component {
       const { message, token, messages, messagesDivs }  = this.props.store
       return (
         <div className="flex flex-column h-100">
-          <div className="ph5 pv2 chat-background flex-auto">
+          <div className="ph5 pv2 chat-background flex-auto overflow-scroll">
            {messagesDivs}
           </div>
           <div className="pa2 bg-blue">
